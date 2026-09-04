@@ -472,6 +472,9 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('develop') {
+          bypass_pull_request_allowances+: [
+            "@egekorkan"
+          ],
           required_approving_review_count: 1,
         },
       ],
